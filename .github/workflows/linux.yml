@@ -8,5 +8,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: deps
+      run: sudo apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
     - name: Build Linux
       run: ./make.sh all
